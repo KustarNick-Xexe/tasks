@@ -1,5 +1,6 @@
 import { useState } from "react";
 import plus from "../../assets/folder-plus.png";
+import folder from "../../assets/folder.png";
 import ActionButton from "../ActionButton";
 import Folder from "./Folder";
 import { useSelector, useDispatch } from "react-redux";
@@ -8,7 +9,7 @@ import styles from "./foldersmanager.module.scss";
 
 //сделать так, чтобы при нажатии куда-то не
 //туда написанное имя если оно не пустое становилось именем файлы - нужно ли для ТЗ
-const FoldersManager = () => {
+const FoldersManager = ({ isOpen }) => {
   const [isActiveInput, setIsActiveInput] = useState(false);
   const [folderName, setFolderName] = useState(null);
 
@@ -36,8 +37,8 @@ const FoldersManager = () => {
     <>
       {/* <div>FoldersManager</div> */}
       <ActionButton
-        icon={plus}
-        label={"Добавить папку"}
+        icon={isOpen ? folder : plus}
+        label={isOpen ? "" : "Добавить папку"}
         color="#f6f6f6"
         onClick={handleClick}
       />
@@ -51,9 +52,10 @@ const FoldersManager = () => {
         />
       )}
       <ul>
-        {folders.map((folder) => (
-          <Folder key={folder.id} name={folder.name} id={folder.id}/>
-        ))}
+        {!isOpen &&
+          folders.map((folder) => (
+            <Folder key={folder.id} name={folder.name} id={folder.id} />
+          ))}
       </ul>
     </>
   );

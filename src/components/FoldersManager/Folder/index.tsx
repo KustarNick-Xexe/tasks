@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setIsOpenFolder, deleteFolder, setIsCloseFolder } from "../../../store/actions";
+import {
+  setIsOpenFolder,
+  deleteFolder,
+  setIsCloseFolder,
+} from "../../../store/actions";
 import { useNavigate } from "react-router-dom";
 import style from "./folder.module.scss";
 import archive from "../../../assets/archive.png";
@@ -39,21 +43,23 @@ const Folder = ({ name, id }) => {
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
     >
-      {(
+      {
         <div className={style.folder}>
           {name === "Архив" ? (
             <div>
-              <img src={archive} alt="-" />
+              <img className={style.archiveIcon} src={archive} alt="-" />
               <span>{name}</span>
             </div>
-          ) : <span>{name}</span>}
-          {(name !== "Архив" && name !== "Основные задачи" && hovered) && (
+          ) : (
+            <span>{name}</span>
+          )}
+          {name !== "Архив" && name !== "Основные задачи" && hovered && (
             <span onClick={handleDelete}>
               <img src={close} alt="-" />
             </span>
           )}
         </div>
-      )}
+      }
     </div>
   );
 };

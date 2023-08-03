@@ -1,0 +1,49 @@
+.taskName {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 24px 44px 4px;
+}
+.folderName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.8;
+  margin-left: 44px;
+}
+.todayContainer {
+  margin-left: 44px;
+}
+.timerBtn {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 1px 16px 50px;
+}
+.timerContainer {
+  display: flex;
+}
+.todaySpan,
+.overallSpan {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.8;
+}
+.doneCheckbox {
+  margin-left: 44px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3c72ff;
+}
+.archiveBtn {
+  margin-left: 30px;
+  color: #3c72ff;
+}
+.deleteBtn {
+  margin-left: 30px;
+  color: red;
+}

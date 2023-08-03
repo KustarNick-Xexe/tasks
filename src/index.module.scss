@@ -17,13 +17,25 @@ body {
   background-color: #fff;
   min-height: 80vh;
 }
-.leftSide {
+.leftSideWide {
   max-width: 236px;
   width: 100%;
   text-align: center;
   background-color: #f6f6f6;
 }
-.rightSide {
+
+.leftSideNarrow {
+  width: 64px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.centerSideWide {
   max-width: calc(1140px - 236px);
   width: 100%;
+}
+.centerSideNarrow {
+  max-width: 750px;
+  width: 100%;
+  border-right: 1px solid #eeeeee;
 }

@@ -45,9 +45,9 @@ export const deleteFolder = (id: string) => ({
     payload: { id }
 });
 
-export const closeTask = (id: string) => ({
+export const closeTask = () => ({
     type: ACTION_TYPE.CLOSE_TASK,
-    payload: { id }
+    payload: {}
 });
 
 export const checkTask = (id: string, status: boolean) => ({

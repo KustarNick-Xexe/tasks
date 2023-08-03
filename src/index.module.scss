@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #e2e7f2;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.mainContainer {
+  display: flex;
+  background-color: #fff;
+  min-height: 80vh;
+}
+.leftSide {
+  max-width: 236px;
+  width: 100%;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.rightSide {
+  max-width: calc(1140px - 236px);
+  width: 100%;
+}

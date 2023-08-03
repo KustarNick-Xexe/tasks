@@ -1,0 +1,19 @@
+.taskContainer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 24px;
+}
+
+.taskName {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 19px;
+  vertical-align: top;
+}
+
+.taskCheckbox {
+  width: 16px;
+  height: 16px;
+}
